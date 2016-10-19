@@ -45,9 +45,10 @@ $outer-border-radius: 4px;
 
   .row {
     display: flex;
+    justify-content: space-between;
 
     label {
-      padding-right: 10px;
+      width: 49%;
     }
   }
 }

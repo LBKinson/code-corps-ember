@@ -1,7 +1,17 @@
 .donation-container {
+  max-width: 400px;
   .donation-amount {
     background-color: $light-blue;
     border: 2px solid $border-light-blue;
     border-radius: 5px;
+    padding: 0 20px;
+
+    .align-right {
+      float: right;
+    }
+  }
+
+  button {
+    width: 100%;
   }
 }
