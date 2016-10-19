@@ -1,7 +1,7 @@
 <h3>Payment information</h3>
 <p>
   {{#if projectName}}
-    Your payment method will be charged {{donationAmount}}
+    Your payment method will be charged {{format-currency donationAmount}}
     per month to support {{projectName}}.
   {{else}}
     No project selected.
