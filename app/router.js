@@ -41,9 +41,7 @@ AppRouter.map(function() {
     });
   });
 
-  this.route('project', {
-    path: '/:slugged_route_slug/:project_slug'
-  }, function() {
+  this.route('project', function() {
     this.route('settings', function() {
       this.route('contributors');
       this.route('profile');
@@ -54,6 +52,7 @@ AppRouter.map(function() {
         path: '/:number'
       });
     });
+    this.route('donate');
   });
 
   this.route('projects', {

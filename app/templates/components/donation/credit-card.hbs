@@ -1,0 +1,20 @@
+<h3>Payment information</h3>
+<p>
+  {{#if projectName}}
+    Your payment method will be charged {{donationAmount}}
+    per month to support {{projectName}}.
+  {{else}}
+    No project selected.
+  {{/if}}
+</p>
+
+<h3>Add card information</h3>
+<div class="credit-card-donation__icon-list">
+  <img src="assets/images/icons/visa.png" alt="visa">
+  <img src="assets/images/icons/american-express.png" alt="american-express">
+  <img src="assets/images/icons/mastercard.png" alt="mastercard">
+  <img src="assets/images/icons/discover.png" alt="discover">
+  <img src="assets/images/icons/jcb.png" alt="jcb">
+  <img src="assets/images/icons/diners-club.png" alt="diners-club">
+</div>
+<button class="button default">Donate</button>
