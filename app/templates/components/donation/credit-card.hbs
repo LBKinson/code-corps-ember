@@ -17,4 +17,23 @@
   <img src="assets/images/icons/jcb.png" alt="jcb">
   <img src="assets/images/icons/diners-club.png" alt="diners-club">
 </div>
+<div class="input-group">
+  <label class="visually-hidden" for="credit-card">Credit Card</label>
+  {{input type="text" id="credit-card" placeholder="Card number"}}
+</div>
+
+<div class="input-group">
+  <div class="row">
+    <label>
+      <span class="visually-hidden">Expiration Date</span>
+      {{input type="text" placeholder="MM / YY"}}
+    </label>
+
+    <label>
+      <span class="visually-hidden">CVC</span>
+      {{input type="text" placeholder="CVC"}}
+    </label>
+  </div>
+</div>
+
 <button class="button default">Donate</button>

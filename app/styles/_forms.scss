@@ -42,6 +42,14 @@ $outer-border-radius: 4px;
       }
     }
   }
+
+  .row {
+    display: flex;
+
+    label {
+      padding-right: 10px;
+    }
+  }
 }
 
 .input-group-addon {
