@@ -1,0 +1,28 @@
+<div class="donation-amount">
+  <h4>{{format-currency donationAmount}}</h4>
+  <p class="footnote">
+    given each month
+    <a href class="align-right">edit</a>
+  </p>
+</div>
+
+<h3>Payment information</h3>
+<p>
+  {{#if projectName}}
+    Your payment method will be charged {{format-currency donationAmount}}
+    per month to support {{projectName}}.
+  {{else}}
+    No project selected.
+  {{/if}}
+</p>
+
+{{donation/credit-card}}
+
+<footer>
+  <p>
+    Your donation will repeat automatically each month.
+    You can cancel or edit your donation at any time.
+    By making this donation, you are agreeing to our
+    {{link-to "Terms of use" "index"}}.
+  </p>
+</footer>
