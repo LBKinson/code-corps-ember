@@ -41,7 +41,9 @@ AppRouter.map(function() {
     });
   });
 
-  this.route('project', function() {
+  this.route('project', {
+    path: '/:slugged_route_slug/:project_slug'
+  }, function() {
     this.route('settings', function() {
       this.route('contributors');
       this.route('profile');
