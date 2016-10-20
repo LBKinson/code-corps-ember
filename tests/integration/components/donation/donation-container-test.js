@@ -10,7 +10,7 @@ test('it renders no project error when no project is passed in', function(assert
 
   this.render(hbs`{{donation/donation-container}}`);
 
-  const mainContent = this.$().find('p').eq(0);
+  let mainContent = this.$().find('p').eq(0);
   assert.equal(mainContent.text().trim(), 'No project selected.');
 });
 
@@ -20,7 +20,7 @@ test('it renders donation amount and frequency', function(assert) {
 
   this.render(hbs`{{donation/donation-container projectTitle=projectTitle}}`);
 
-  const mainContent = this.$().find('p').eq(0);
+  let mainContent = this.$().find('p').eq(0);
   assert.ok(mainContent.text().match('Your payment method will be charged'));
 });
 
@@ -30,6 +30,6 @@ test('it renders donation amount and frequency', function(assert) {
 
   this.render(hbs`{{donation/donation-container donationAmount=amount}}`);
 
-  const donationInfo = this.$().find('h4').eq(0);
+  let donationInfo = this.$().find('h4').eq(0);
   assert.equal(donationInfo.text().trim(), '$100.00');
 });
