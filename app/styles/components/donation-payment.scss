@@ -4,14 +4,29 @@
     background-color: $light-blue;
     border: 2px solid $border-light-blue;
     border-radius: 5px;
-    padding: 0 20px;
+    padding: 15px;
 
-    .align-right {
-      float: right;
+    h4 {
+      margin: 0;
     }
+
+    .footnote {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  h3 {
+    margin-top: 35px;
   }
 
   button {
     width: 100%;
+  }
+}
+
+.credit-card-form {
+  &__icon-list {
+    margin-bottom: 15px;
   }
 }
