@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { formatCurrency } from 'certs-web/helpers/format-currency';
+import { formatCurrency } from 'code-corps-ember/helpers/format-currency';
 
 module('Unit | Helper | format-currency');
 

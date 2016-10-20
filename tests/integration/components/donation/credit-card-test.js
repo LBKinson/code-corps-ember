@@ -6,19 +6,7 @@ moduleForComponent('donation/credit-card', 'Integration | Component | donation/c
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{donation/credit-card}}`);
 
   assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#donation/credit-card}}
-      template block text
-    {{/donation/credit-card}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });

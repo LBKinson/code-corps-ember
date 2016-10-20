@@ -5,20 +5,31 @@ moduleForComponent('donation/donation-container', 'Integration | Component | don
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders no project error when no project is passed in', function(assert) {
+  assert.expect(1);
 
   this.render(hbs`{{donation/donation-container}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  const mainContent = this.$().find('p').eq(0);
+  assert.equal(mainContent.text().trim(), 'No project selected.');
+});
 
-  // Template block usage:
-  this.render(hbs`
-    {{#donation/donation-container}}
-      template block text
-    {{/donation/donation-container}}
-  `);
+test('it renders donation amount and frequency', function(assert) {
+  assert.expect(1);
+  this.set('projectTitle', 'Funtown');
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.render(hbs`{{donation/donation-container projectTitle=projectTitle}}`);
+
+  const mainContent = this.$().find('p').eq(0);
+  assert.ok(mainContent.text().match('Your payment method will be charged'));
+});
+
+test('it renders donation amount and frequency', function(assert) {
+  assert.expect(1);
+  this.set('amount', 100);
+
+  this.render(hbs`{{donation/donation-container donationAmount=amount}}`);
+
+  const donationInfo = this.$().find('h4').eq(0);
+  assert.equal(donationInfo.text().trim(), '$100.00');
 });
