@@ -1,7 +1,12 @@
 import Ember from 'ember';
 
-const { Component } = Ember;
+const {
+  Component,
+  computed: { not }
+} = Ember;
 
 export default Component.extend({
-  classNames: ['credit-card-form']
+  classNames: ['credit-card-form'],
+  canDonate: true,
+  cannotDonate: not('canDonate')
 });

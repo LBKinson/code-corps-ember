@@ -5,8 +5,25 @@ moduleForComponent('donation/credit-card', 'Integration | Component | donation/c
   integration: true
 });
 
-test('it renders', function(assert) {
+test('inputs can be disabled', function(assert) {
+  assert.expect(3);
+  this.set('canDonate', false);
+  this.render(hbs`{{donation/credit-card canDonate=canDonate}}`);
+
+  const inputs = this.$().find('input').get();
+
+  inputs.forEach((input) => {
+    assert.ok($(input).prop('disabled'));
+  });
+});
+
+test('inputs are enabled by default', function(assert) {
+  assert.expect(3);
   this.render(hbs`{{donation/credit-card}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  const inputs = this.$().find('input').get();
+
+  inputs.forEach((input) => {
+    assert.notOk($(input).prop('disabled'));
+  });
 });

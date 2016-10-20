@@ -10,7 +10,11 @@
 <div class="input-group">
   <label>
     <span class="visually-hidden">Credit Card</span>
-    {{input type="text" class="icon-input" placeholder="Card number"}}
+    {{input
+      type="text"
+      class="icon-input"
+      disabled=cannotDonate
+      placeholder="Card number"}}
   </label>
 </div>
 
@@ -18,12 +22,20 @@
   <div class="row">
     <label>
       <span class="visually-hidden">Expiration Date</span>
-      {{input type="text" class="icon-input" placeholder="MM / YY"}}
+      {{input
+        type="text"
+        class="icon-input"
+        disabled=cannotDonate
+        placeholder="MM / YY"}}
     </label>
 
     <label>
       <span class="visually-hidden">CVC</span>
-      {{input type="text" class="icon-input" placeholder="CVC"}}
+      {{input
+        type="text" 
+        class="icon-input"
+        disabled=cannotDonate
+        placeholder="CVC"}}
     </label>
   </div>
 </div>
