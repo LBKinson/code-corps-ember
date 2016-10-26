@@ -41,19 +41,18 @@ AppRouter.map(function() {
     });
   });
 
-  this.route('project', {
-    path: '/:slugged_route_slug/:project_slug'
-  }, function() {
+  this.route('project', { path: '/:slugged_route_slug/:project_slug' }, function() {
     this.route('settings', function() {
       this.route('contributors');
       this.route('profile');
     });
+
     this.route('tasks', function() {
       this.route('new');
-      this.route('task', {
-        path: '/:number'
-      });
+      this.route('task', { path: '/:number' });
     });
+
+    this.route('donation-goals');
   });
 
   this.route('projects', {

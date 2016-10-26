@@ -63,7 +63,7 @@ function generatePreviewMentions(schema, preview) {
 
 // The set of routes we have defined; needs updated when adding new routes
 const routes = [
-  'categories', 'comment-user-mentions', 'comments', 'organizations',
+  'categories', 'comment-user-mentions', 'comments', 'donation-goals', 'organizations',
   'task-user-mentions', 'tasks', 'previews', 'projects', 'project-categories',
   'slugged-routes', 'user-categories', 'users'
 ];
@@ -131,6 +131,14 @@ export default function() {
 
     return comment;
   });
+
+  /**
+   * Donation goals
+   */
+
+  this.get('/donation-goals', { coalesce: true });
+  this.post('/donation-goals');
+  this.patch('/donation-goals');
 
   /**
   * Organization memberships
