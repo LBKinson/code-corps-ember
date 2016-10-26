@@ -8,7 +8,7 @@
   <img src="assets/images/icons/diners-club.png" alt="diners-club">
 </div>
 <div class="input-group">
-  <label>
+  <label class="icon-label credit-card-label">
     <span class="visually-hidden">Credit Card</span>
     {{input
       type="text"
@@ -20,7 +20,7 @@
 
 <div class="input-group">
   <div class="row">
-    <label>
+    <label class="icon-label calendar-label">
       <span class="visually-hidden">Expiration Date</span>
       {{input
         type="text"
@@ -29,10 +29,10 @@
         placeholder="MM / YY"}}
     </label>
 
-    <label>
+    <label class="icon-label lock-label">
       <span class="visually-hidden">CVC</span>
       {{input
-        type="text" 
+        type="text"
         class="icon-input"
         disabled=cannotDonate
         placeholder="CVC"}}
